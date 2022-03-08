@@ -1,9 +1,7 @@
 export default class MyGameBoard {
-    constructor(myCell, myEvents, setMove) {
+    constructor(myCell, myEvents) {
         this.myCell = myCell;
         this.myEvents = myEvents;
-        this.setMove = setMove;
-        console.log(this.setMove);
     }
 
     static board = document.querySelector(".board");
