@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+
+}
+
+[class*="__container"] {
+    max-width: 1225px;
+    margin: 0 auto;
+}
+
+.header__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+}
+
+.player__x {
+    padding: 12px 54px;
+}
+
+.player__o {
+    padding: 12px 54px; 
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+} 
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
