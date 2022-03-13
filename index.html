@@ -11,19 +11,57 @@
 
     <header class="header">
         <div class="header__container">
-            <div class="header__buttons">
-
+            <div class="header__content">
+                <div class="header__buttons">
+                    <button>
+                        <div class="player__x">X</div>
+                        <div class="game__series">_</div>
+                    </button>
+                    <button>
+                        <span>O</span>
+                        <div class="game__series">_</div>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
     <main class="main">
         <div class="main__container">
-            <div class="board">
-        
-            </div>        
+            <div class="game__content">
+                <div class="game__move">
+                    <p>Move : X</p>
+                </div>
+                <div class="game__board">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
-
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="game__restart">
+                    <button>Restart Game</button>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script type="module" src="app.js"></script>
     
 </body>

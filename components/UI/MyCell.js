@@ -18,7 +18,6 @@ export default class MyCell {
             for(let j = 0;j < this.cols;j++) {
                 const tableColumn = document.createElement(this.td);
                 tableColumn.classList.add("cell");
-                tableColumn.setAttribute("id", j);
                 tableRow.appendChild(tableColumn);
             }
         }

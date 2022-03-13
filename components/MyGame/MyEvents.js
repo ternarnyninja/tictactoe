@@ -1,5 +1,4 @@
 import MyGameBoard from "./MyGameBoard.js";
-import MyMove from "./MyMove.js";
 
 // Maybe some other way?
 export default class MyEvents {
@@ -10,8 +9,8 @@ export default class MyEvents {
     handleEvent = () => {
 
         for(let i = 0;i < MyGameBoard.cells.length;i++) {
-            MyGameBoard.cells[i].addEventListener("click", this.e, false);
-
+            MyGameBoard.cells[i].setAttribute("id", i);
+            MyGameBoard.cells[i].addEventListener("click", this.move, false);
         }
 
     }
