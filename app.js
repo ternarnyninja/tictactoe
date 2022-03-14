@@ -3,9 +3,9 @@ import Button from "./components/UI/Button.js";
 import GameBoard from "./components/UI/GameBoard.js";
 import Events from "./components/Logic/Events.js";
 import PlayerMove from "./components/Logic/PlayerMove.js";
-import { startBtn } from "./components/utils/utils.js";
-import { elem } from "./components/utils/utils.js";
-import { headerTitle } from "./components/utils/utils.js";
+import { startBtn } from "./components/Utils/utilites.js";
+import { elem } from "./components/Utils/utilites.js";
+import { headerTitle } from "./components/Utils/utilites.js";
 
 const field = new Field(3, 3, "tr", "td");
 const buttons = [

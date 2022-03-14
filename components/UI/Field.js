@@ -1,5 +1,5 @@
-import { table } from "../utils/utils.js";
-import { board } from "../utils/utils.js";
+import { table } from "../Utils/utilites.js";
+import { board } from "../Utils/utilites.js";
 
 export default class Field {
     constructor(rows, cols, tr, td) {
