@@ -1,24 +1,44 @@
-import MyCell from "./components/UI/MyCell.js";
-import MyGameBoard from "./components/MyGame/MyGameBoard.js";
-import MyEvents from "./components/MyGame/MyEvents.js";
-import MyMove from "./components/MyGame/MyMove.js";
-import CheckWin from "./components/MyGame/CheckWin.js";
+import Field from "./components/UI/Field.js";
+import Button from "./components/UI/Button.js";
+import GameBoard from "./components/UI/GameBoard.js";
+import Events from "./components/Logic/Events.js";
+import PlayerMove from "./components/Logic/PlayerMove.js";
+import { startBtn } from "./components/utils/utils.js";
+import { elem } from "./components/utils/utils.js";
+import { headerTitle } from "./components/utils/utils.js";
 
-const winCombos = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-];
-const myCell = new MyCell(3, 3, "tr", "td");
-// const myBoard = new MyBoard(Array.from(Array(9).keys()));
-const myBoard = Array.from(Array(9).keys());
-const checkWin = new CheckWin(myBoard, winCombos);
-const myMove = new MyMove("X", myBoard, checkWin);
-const myEvents = new MyEvents(myMove);
-const myGameBoard = new MyGameBoard(myCell, myEvents);
-// myGameBoard.startGame();
+const field = new Field(3, 3, "tr", "td");
+const buttons = [
+    new Button("button", "div", "div","player__x", "game__series", "X", "_"),
+    new Button("button", "div", "div","player__o", "game__series", "O", "_"),
+]
+const playerMove = new PlayerMove();
+const events = new Events(playerMove);
+const gameBoard = new GameBoard(field, buttons, events);
+
+startBtn.addEventListener("click", renderBoard, false);
+
+let start = 0;
+function renderBoard() {
+    if(start === 0) {
+        start = 1;
+    }
+    startBtn.removeEventListener("click", renderBoard, false);
+    elem.style.display = "block";
+    let width = 1;
+    let id = setInterval(frame, 42);
+
+    function frame() {
+        if(width >= 100){
+            clearInterval(id);
+            start = 0;
+            elem.style.display = "none";
+            startBtn.style.display = "none";
+            headerTitle.style.display = "none";
+            setTimeout(gameBoard.startGame, 1000);
+        } else {
+            width++;
+            elem.style.width = width + "%";
+        }
+    }
+}

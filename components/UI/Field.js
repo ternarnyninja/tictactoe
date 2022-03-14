@@ -1,7 +1,7 @@
-import MyGameBoard from "../MyGame/MyGameBoard.js";
+import { table } from "../utils/utils.js";
+import { board } from "../utils/utils.js";
 
-// I think... it can be improved
-export default class MyCell {
+export default class Field {
     constructor(rows, cols, tr, td) {
         this.rows = rows;
         this.cols = cols; 
@@ -9,11 +9,11 @@ export default class MyCell {
         this.td = td;
     }
 
-    renderMyCell = () => {
+    renderField = () => {
 
         for(let i = 0;i < this.rows;i++) {
             const tableRow = document.createElement(this.tr);
-            MyGameBoard.table.appendChild(tableRow);
+            table.appendChild(tableRow);
 
             for(let j = 0;j < this.cols;j++) {
                 const tableColumn = document.createElement(this.td);
@@ -21,7 +21,7 @@ export default class MyCell {
                 tableRow.appendChild(tableColumn);
             }
         }
-        MyGameBoard.board.appendChild(MyGameBoard.table);
+        board.appendChild(table);
     }
 
 }

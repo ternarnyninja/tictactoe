@@ -8,19 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-
     <header class="header">
         <div class="header__container">
             <div class="header__content">
                 <div class="header__buttons">
-                    <button>
-                        <div class="player__x">X</div>
-                        <div class="game__series">_</div>
-                    </button>
-                    <button>
-                        <span>O</span>
-                        <div class="game__series">_</div>
-                    </button>
+                    <h1 class="header__title">Tic Tac Toe</h1>
                 </div>
             </div>
         </div>
@@ -28,27 +20,16 @@
     <main class="main">
         <div class="main__container">
             <div class="game__content">
+                    <div class="progress">
+                        <div id="load__bar">
+
+                        </div>
+                    </div>
                 <div class="game__move">
-                    <p>Move : X</p>
+                    <!-- <p>Move : X</p> -->
                 </div>
                 <div class="game__board">
-                    <table>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
+
                 </div>
             </div>
         </div>
@@ -56,8 +37,9 @@
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__content">
-                <div class="game__restart">
-                    <button>Restart Game</button>
+                <div class="game__buttons">
+                    <!-- <button class="game__reset">Reset Game</button> -->
+                    <button class="game__start">Start Game</button>
                 </div>
             </div>
         </div>

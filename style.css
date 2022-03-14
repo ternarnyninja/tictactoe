@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 
-.header {
-
+.header__title {
+    color: #fff;
+    font-size: 155px;
+    font-weight: 900;
 }
 
 body {
@@ -54,6 +56,25 @@ button:first-child {
 .board {
     display: flex;
     justify-content: center;
+}
+
+.start-game {
+    display: flex;
+    justify-content: center;
+    margin-top: 155px;
+}
+
+.progress {
+    width: 100%;
+    background: teal;
+}
+
+#load__bar {
+    margin-top: 155px;
+    display: none;
+    width: 1%;
+    height: 30px;
+    background: #fff;
 }
 
 .game__move {
@@ -106,9 +127,6 @@ table tr td:last-child {
 .play__vs__ai {
     display: flex;
     align-items: center;
-}
-
-.footer {
 }
 
 .footer__content {
