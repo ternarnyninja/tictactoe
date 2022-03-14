@@ -1,4 +1,4 @@
-import { cells } from "../utils/utils.js";
+import { cells } from "../Utils/utilites.js";
 
 export default class Events {
     constructor(playerMove) {
