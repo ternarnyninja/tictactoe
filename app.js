@@ -12,7 +12,7 @@ const buttons = [
     new Button("button", "div", "div","player__x", "game__series", "X", "_"),
     new Button("button", "div", "div","player__o", "game__series", "O", "_"),
 ]
-const playerMove = new PlayerMove();
+const playerMove = new PlayerMove("X");
 const events = new Events(playerMove);
 const gameBoard = new GameBoard(field, buttons, events);
 

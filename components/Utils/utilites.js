@@ -1,4 +1,4 @@
-const winCombos = [
+export const winCombos = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -9,6 +9,7 @@ const winCombos = [
     [2, 4, 6],
 ];
 
+export let fieldMoves = Array.from(Array(9).keys());
 export const headerButtons = document.querySelector(".header__buttons");
 export const table = document.createElement("table");
 export const board = document.querySelector(".game__board");
